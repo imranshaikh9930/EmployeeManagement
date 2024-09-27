@@ -30,6 +30,11 @@ const createEmployController = async(req,res)=>{
         
     } catch (error) {
         console.log(error);
+        status(500).json({
+            message: "Internal Server Error",
+            success: false,
+            error: error.message,
+        });
     }
 }
 
@@ -57,6 +62,11 @@ const getAllEmployee = async(req,res)=>{
         return res.status(200).json({data:allEmp,success:true,count:countEmp});
     } catch (error) {
         console.log(error.message);
+        status(500).json({
+            message: "Internal Server Error",
+            success: false,
+            error: error.message,
+        });
     }
 }
 
@@ -72,6 +82,11 @@ const removeEmployee = async(req,res)=>{
            res.status(200).json({message:"Employee Remove ",success:true})
         } catch (error) {
             console.log(error);
+            status(500).json({
+                message: "Internal Server Error",
+                success: false,
+                error: error.message,
+            });
         }
 }
 

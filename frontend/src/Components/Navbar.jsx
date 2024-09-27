@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { NavLink } from 'react-router-dom'
-import { useAppContext } from '../context/appContext'
+import { useAppContext } from '../context/appContext';
+import {toast} from "react-hot-toast";
 
 const Navbar = () => {
     const [isMenuOpen,setIsMenuOpen] = useState(false);
@@ -11,13 +12,13 @@ const Navbar = () => {
         
         if (userInfo) {
             localStorage.removeItem("info");
-            console.log("User successfully logged out.");
+            toast.success("logout successfull");
+            // console.log("User successfully logged out.");
+
             window.location.reload();
             // Optionally, redirect the user to the login page or home page
             // window.location.href = '/login'; // Uncomment if redirection is needed
-        } else {
-            console.log("No user is logged in.");
-        }
+        } 
     };
   return (
     <nav className=" p-4 shadow-md">

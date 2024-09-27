@@ -39,7 +39,7 @@ const Login = () => {
       }
   
       const result = await resp.json(); // Parse the JSON response
-      console.log("Response from server:", result);
+      // console.log("Response from server:", result);
   
       // If a token is received (for login), save it
       if (result.token) {
@@ -51,12 +51,13 @@ const Login = () => {
         
         localStorage.setItem("info",JSON.stringify(userInfo)); // Save token in local storage
         toast.success("Login Successfull")
-        navigate("/"); // Navigate to home or dashboard after successful login
+        navigate("/");
+        return 
       }
 
       toast.success("Register Successfull");
   
-      // Set the logged-in user (assumed you have a `setUser` function
+    
       
   
     } catch (error) {

@@ -6,7 +6,7 @@ const User = require('../models/userModel');
 const registerController = async (req, res) => {
     const {name, username, password } = req.body;
 
-    console.log(name,username,password);
+    // console.log(name,username,password);
 
     try {
         // Check if username or password is missing

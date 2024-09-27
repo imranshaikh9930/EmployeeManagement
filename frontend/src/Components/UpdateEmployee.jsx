@@ -11,7 +11,7 @@ const UpdateEmployee = ({ employee }) => {
     useEffect(() => {
         // Pre-fill the form with existing employee data
 
-        console.log(employee)
+        // console.log(employee)
         if (employee) {
             setValue("name", employee.name);
             setValue("email", employee.email);
@@ -29,7 +29,7 @@ const UpdateEmployee = ({ employee }) => {
     const onSubmit = async (data) => {
 
 
-        console.log(data)
+        // console.log(data)
         const imageFile = data.image && data.image.length > 0 ? data.image[0] : null;
     
        

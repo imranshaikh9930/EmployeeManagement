@@ -37,7 +37,7 @@ const AddEmploy = () => {
       }
   
       const result = await resp.json();
-      console.log(result);
+    //   console.log(result);
       toast.success("Employee Created ")
     } catch (error) {
       console.error(error.message);
