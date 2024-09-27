@@ -53,6 +53,8 @@ const Login = () => {
         toast.success("Login Successfull")
         navigate("/"); // Navigate to home or dashboard after successful login
       }
+
+      toast.success("Register Successfull");
   
       // Set the logged-in user (assumed you have a `setUser` function
       
